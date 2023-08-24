@@ -12,7 +12,7 @@ La Pokédex Interactiva es un proyecto desarrollado como parte de la materia de 
 
 - Detalle de Pokémon: Al hacer clic en un Pokémon, se abrirá una ventana emergente que mostrará información detallada, como su tipo, habilidades, estadísticas y descripción.
 
-- Diseño Funcional y Modular: El proyecto se desarrollará siguiendo los principios del diseño funcional y modular. Se utilizarán funciones independientes y reutilizables para manejar diferentes aspectos, como la búsqueda, el filtrado y la presentación de los datos.
+- Diseño Funcional y Modular: El proyecto se desarrollará siguiendo los principios del diseño funcional y modular. Se utilizarán funciones independientes y reutilizables para manejar diferentes aspectos, como la presentación de los datos.
 
 - Interfaz Atractiva: El diseño se centrará en la usabilidad y la estética. Se aplicarán técnicas de diseño responsivo para asegurarse de que la Pokédex se vea y funcione bien en diferentes dispositivos y tamaños de pantalla.
 
