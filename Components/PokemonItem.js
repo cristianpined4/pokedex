@@ -76,9 +76,9 @@ const PokemonItem = (el) => {
     return text;
   };
 
-  const description = speces.flavor_text_entries.find(
-    (el) => el.language.name === "en"
-  ).flavor_text;
+  const description = speces.flavor_text_entries
+    .find((el) => el.language.name === "en")
+    .flavor_text.replace("", " ");
 
   return /* html */ `
     <div class="content ${types[0]}">

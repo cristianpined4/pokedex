@@ -23,6 +23,7 @@ body {
 
 p {
   margin-bottom: 1rem;
+  word-wrap: break-word;
 }
 
 h1,
@@ -173,6 +174,7 @@ table tr td:first-child {
 .pokemon {
   overflow-y: auto;
   position: absolute;
+  max-width: 500px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -342,6 +344,7 @@ table tr td:first-child {
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 1.25rem;
+  width: 100%;
 }
 
 .stat .name {
