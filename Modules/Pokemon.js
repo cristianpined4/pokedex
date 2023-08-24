@@ -18,7 +18,7 @@ function Pokemon(data, callback) {
         stats: data.stats.map((el) => {
           return {
             name: el.stat.name,
-            base_stat: el.base_stat,
+            point: el.base_stat,
           };
         }),
         moves: data.moves.map((el) => el.move.name),
