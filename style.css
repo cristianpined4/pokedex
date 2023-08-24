@@ -1,0 +1,363 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600");
+
+html,
+body {
+  background: #eeeeee;
+  font-size: 100%;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  width: 100%;
+  overflow: hidden;
+}
+
+.row div.list {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.list {
+  background-color: #ffffff;
+  padding: 1rem;
+  overflow-y: auto;
+  height: 90vh;
+}
+
+.list .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 1rem;
+}
+
+.list .grid .item,
+.list .grid .item * {
+  cursor: pointer;
+}
+
+.list .grid .item {
+  border-radius: 15px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.list .grid .item img {
+  width: 80%;
+  height: inherit;
+}
+
+.list .grid .item .about {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.list .grid .item .about h4 {
+  background-color: #ffffff;
+  text-transform: capitalize;
+}
+
+.list .grid .item .about .extra {
+  display: flex;
+  justify-content: space-around;
+}
+
+.list .grid .item .about .extra span {
+  padding: 0.25rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  border-radius: 15px;
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.pokemon {
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.pokemon .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 2rem;
+}
+
+.pokemon .navbar * {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: #ffffff;
+}
+
+.pokemon .navbar .back,
+.pokemon .navbar .favorite {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.5rem;
+}
+
+.pokemon .navbar .back:hover,
+.pokemon .navbar .back:focus,
+.pokemon .navbar .back:active {
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.pokemon .navbar .favorite:hover,
+.pokemon .navbar .favorite:focus,
+.pokemon .navbar .favorite:active {
+  font-weight: 900;
+}
+
+.pokemon .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem;
+}
+
+.pokemon .content img {
+  width: 50%;
+  height: auto;
+  position: relative;
+  z-index: 999;
+}
+
+.pokemon .about *,
+.pokemon .about *:before,
+.pokemon .about *:after {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.pokemon .about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.pokemon .about .types {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+}
+
+.pokemon .about .types .type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff40;
+  padding: 0.2rem 1.5rem;
+  border-radius: 15px;
+  margin-right: 0.3rem;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.pokemon .about span {
+  font-size: 1.25rem;
+}
+
+.pokemon .content .info {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  margin-top: -2rem;
+}
+
+.pokemon .content .info .nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.pokemon .content .info .nav-items a {
+  color: #a7a7a7;
+  font-weight: 900;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.pokemon .content .info .nav-items a.active {
+  color: #000000;
+  border-bottom: 2px solid #2d2fae;
+}
+
+.pokemon .content .info .tab {
+  min-height: 400px;
+  display: none;
+}
+
+.pokemon .content .info .tab.active {
+  display: block;
+}
+
+.row .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #00000075;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.row.active .mask {
+  opacity: 1;
+  visibility: visible;
+}
+
+.row.active .pokemon {
+  animation: linear 0.5s slideIn;
+  animation-fill-mode: forwards;
+}
+
+.row.not-active .pokemon {
+  animation: linear 0.75s slideOut;
+  animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 768px) {
+  .row.active .pokemon {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.5;
+    visibility: visible;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(150%);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(150%);
+  }
+  50% {
+    opacity: 0.5;
+    visibility: visible;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
