@@ -1,5 +1,5 @@
 const PokemonItem = (el) => {
-  const { name, img, types, id } = el;
+  const { name, img, types, id, weigth, height, abilities, speces } = el;
 
   const zerofill = (value, length) => {
     return value.toString().length < length
@@ -15,7 +15,29 @@ const PokemonItem = (el) => {
     return text;
   };
 
-  return `
+  const getAbilities = () => {
+    let text = "";
+    abilities.forEach((ability) => {
+      text += `${ability}, `;
+    });
+    text = text.slice(0, -2);
+    return text;
+  };
+
+  const speceName = speces.genera.find((sp) => sp.language.name === "en")
+    ? speces.genera.find((sp) => sp.language.name === "en").genus
+    : "No name";
+
+  const getEggGroups = () => {
+    let text = "";
+    speces.egg_groups.forEach((egg) => {
+      text += `${egg.name}, `;
+    });
+    text = text.slice(0, -2);
+    return text;
+  };
+
+  return /* html */ `
     <div class="content ${types[0]}">
             <div class="about">
               <div>
@@ -37,13 +59,45 @@ const PokemonItem = (el) => {
                 <a href="#moves">Moves</a>
               </nav>
               <div class="tab" id="about">
-                acerca
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>Species</td>
+                      <td>${speceName}</td>
+                    </tr>
+                    <tr>
+                      <td>Height</td>
+                      <td>${height / 100} m</td>
+                    </tr>
+                    <tr>
+                      <td>Weight</td>
+                      <td>${weigth / 1000} kg</td>
+                    </tr>
+                    <tr>
+                      <td>Abilities</td>
+                      <td>${getAbilities()}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <h5>Breeding</h4>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>Egg Groups</td>
+                      <td>${getEggGroups()}</td>
+                    </tr>
+                    <tr>
+                      <td>Egg Cycle</td>
+                      <td>${types[0]}</td>
+                     </tr>
+                  </tbody>
+                </table>
               </div>
               <div class="tab" id="base">
                 base
               </div>
-              <div class="tab" id="evolution">
-                evolucion
+               <div class="tab" id="evolution">
+                evolution
               </div>
               <div class="tab" id="moves">
                 movimientos
