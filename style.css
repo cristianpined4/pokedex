@@ -361,3 +361,291 @@ small,
   }
 }
 
+/* Grass Type */
+.item.grass {
+  background-color: #78c850;
+  color: #78c850;
+  border: 1px solid #78c850;
+}
+
+.pokemon:has(.content.grass) {
+  background-color: #78c850;
+}
+
+.pokemon:has(.content.grass) .navbar .back:hover,
+.pokemon:has(.content.grass) .navbar .back:focus,
+.pokemon:has(.content.grass) .navbar .back:active {
+  color: #78c850;
+}
+
+/* Fire Type */
+.item.fire {
+  background-color: #f08030;
+  color: #f08030;
+  border: 1px solid #f08030;
+}
+
+.pokemon:has(.content.fire) {
+  background-color: #f08030;
+}
+
+.pokemon:has(.content.fire) .navbar .back:hover,
+.pokemon:has(.content.fire) .navbar .back:focus,
+.pokemon:has(.content.fire) .navbar .back:active {
+  color: #f08030;
+}
+
+/* Water Type */
+.item.water {
+  background-color: #6890f0;
+  color: #6890f0;
+  border: 1px solid #6890f0;
+}
+
+.pokemon:has(.content.water) {
+  background-color: #6890f0;
+}
+
+.pokemon:has(.content.water) .navbar .back:hover,
+.pokemon:has(.content.water) .navbar .back:focus,
+.pokemon:has(.content.water) .navbar .back:active {
+  color: #6890f0;
+}
+
+/* Electric Type */
+.item.electric {
+  background-color: #f8d030;
+  color: #f8d030;
+  border: 1px solid #f8d030;
+}
+
+.pokemon:has(.content.electric) {
+  background-color: #f8d030;
+}
+
+.pokemon:has(.content.electric) .navbar .back:hover,
+.pokemon:has(.content.electric) .navbar .back:focus,
+.pokemon:has(.content.electric) .navbar .back:active {
+  color: #f8d030;
+}
+
+/* Normal Type */
+.item.normal {
+  background-color: #a8a878;
+  color: #a8a878;
+  border: 1px solid #a8a878;
+}
+
+.pokemon:has(.content.normal) {
+  background-color: #a8a878;
+}
+
+.pokemon:has(.content.normal) .navbar .back:hover,
+.pokemon:has(.content.normal) .navbar .back:focus,
+.pokemon:has(.content.normal) .navbar .back:active {
+  color: #a8a878;
+}
+
+/* Fairy Type */
+.item.fairy {
+  background-color: #ee99ac;
+  color: #ee99ac;
+  border: 1px solid #ee99ac;
+}
+
+.pokemon:has(.content.fairy) {
+  background-color: #ee99ac;
+}
+
+.pokemon:has(.content.fairy) .navbar .back:hover,
+.pokemon:has(.content.fairy) .navbar .back:focus,
+.pokemon:has(.content.fairy) .navbar .back:active {
+  color: #ee99ac;
+}
+
+/* Fighting Type */
+.item.fighting {
+  background-color: #c03028;
+  color: #c03028;
+  border: 1px solid #c03028;
+}
+
+.pokemon:has(.content.fighting) {
+  background-color: #c03028;
+}
+
+.pokemon:has(.content.fighting) .navbar .back:hover,
+.pokemon:has(.content.fighting) .navbar .back:focus,
+.pokemon:has(.content.fighting) .navbar .back:active {
+  color: #c03028;
+}
+
+/* Poison Type */
+.item.poison {
+  background-color: #a040a0;
+  color: #a040a0;
+  border: 1px solid #a040a0;
+}
+
+.pokemon:has(.content.poison) {
+  background-color: #a040a0;
+}
+
+.pokemon:has(.content.poison) .navbar .back:hover,
+.pokemon:has(.content.poison) .navbar .back:focus,
+.pokemon:has(.content.poison) .navbar .back:active {
+  color: #a040a0;
+}
+
+/* Ground Type */
+.item.ground {
+  background-color: #e0c068;
+  color: #e0c068;
+  border: 1px solid #e0c068;
+}
+
+.pokemon:has(.content.ground) {
+  background-color: #e0c068;
+}
+
+.pokemon:has(.content.ground) .navbar .back:hover,
+.pokemon:has(.content.ground) .navbar .back:focus,
+.pokemon:has(.content.ground) .navbar .back:active {
+  color: #e0c068;
+}
+
+/* Flying Type */
+.item.flying {
+  background-color: #a890f0;
+  color: #a890f0;
+  border: 1px solid #a890f0;
+}
+
+.pokemon:has(.content.flying) {
+  background-color: #a890f0;
+}
+
+.pokemon:has(.content.flying) .navbar .back:hover,
+.pokemon:has(.content.flying) .navbar .back:focus,
+.pokemon:has(.content.flying) .navbar .back:active {
+  color: #a890f0;
+}
+
+/* Psychic Type */
+.item.psychic {
+  background-color: #f85888;
+  color: #f85888;
+  border: 1px solid #f85888;
+}
+
+.pokemon:has(.content.psychic) {
+  background-color: #f85888;
+}
+
+.pokemon:has(.content.psychic) .navbar .back:hover,
+.pokemon:has(.content.psychic) .navbar .back:focus,
+.pokemon:has(.content.psychic) .navbar .back:active {
+  color: #f85888;
+}
+
+/* Bug Type */
+.item.bug {
+  background-color: #a8b820;
+  color: #a8b820;
+  border: 1px solid #a8b820;
+}
+
+.pokemon:has(.content.bug) {
+  background-color: #a8b820;
+}
+
+.pokemon:has(.content.bug) .navbar .back:hover,
+.pokemon:has(.content.bug) .navbar .back:focus,
+.pokemon:has(.content.bug) .navbar .back:active {
+  color: #a8b820;
+}
+
+/* Rock Type */
+.item.rock {
+  background-color: #b8a038;
+  color: #b8a038;
+  border: 1px solid #b8a038;
+}
+
+.pokemon:has(.content.rock) {
+  background-color: #b8a038;
+}
+
+.pokemon:has(.content.rock) .navbar .back:hover,
+.pokemon:has(.content.rock) .navbar .back:focus,
+.pokemon:has(.content.rock) .navbar .back:active {
+  color: #b8a038;
+}
+
+/* Ghost Type */
+.item.ghost {
+  background-color: #705898;
+  color: #705898;
+  border: 1px solid #705898;
+}
+
+.pokemon:has(.content.ghost) {
+  background-color: #705898;
+}
+
+.pokemon:has(.content.ghost) .navbar .back:hover,
+.pokemon:has(.content.ghost) .navbar .back:focus,
+.pokemon:has(.content.ghost) .navbar .back:active {
+  color: #705898;
+}
+
+/* Dragon Type */
+.item.dragon {
+  background-color: #7038f8;
+  color: #7038f8;
+  border: 1px solid #7038f8;
+}
+
+.pokemon:has(.content.dragon) {
+  background-color: #7038f8;
+}
+
+.pokemon:has(.content.dragon) .navbar .back:hover,
+.pokemon:has(.content.dragon) .navbar .back:focus,
+.pokemon:has(.content.dragon) .navbar .back:active {
+  color: #7038f8;
+}
+
+/* Steel Type */
+.item.steel {
+  background-color: #b8b8d0;
+  color: #b8b8d0;
+  border: 1px solid #b8b8d0;
+}
+
+.pokemon:has(.content.steel) {
+  background-color: #b8b8d0;
+}
+
+.pokemon:has(.content.steel) .navbar .back:hover,
+.pokemon:has(.content.steel) .navbar .back:focus,
+.pokemon:has(.content.steel) .navbar .back:active {
+  color: #b8b8d0;
+}
+
+/* Ice Type */
+.item.ice {
+  background-color: #98d8d8;
+  color: #98d8d8;
+  border: 1px solid #98d8d8;
+}
+
+.pokemon:has(.content.ice) {
+  background-color: #98d8d8;
+}
+
+.pokemon:has(.content.ice) .navbar .back:hover,
+.pokemon:has(.content.ice) .navbar .back:focus,
+.pokemon:has(.content.ice) .navbar .back:active {
+  color: #98d8d8;
+}
