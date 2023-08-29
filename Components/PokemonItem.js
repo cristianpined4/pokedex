@@ -20,7 +20,7 @@ const PokemonItem = (el) => {
     abilities.forEach((ability) => {
       text += `${ability}, `;
     });
-    text = text.slice(0, -2);
+    text = text.slice(0, -2).replaceAll("-", " ");
     return text;
   };
 
@@ -33,7 +33,7 @@ const PokemonItem = (el) => {
     speces.egg_groups.forEach((egg) => {
       text += `${egg.name}, `;
     });
-    text = text.slice(0, -2);
+    text = text.slice(0, -2).replaceAll("-", " ");
     return text;
   };
 
@@ -42,7 +42,7 @@ const PokemonItem = (el) => {
       contador = 0;
     stats.forEach((stat) => {
       contador += parseInt(stat.point);
-      text += `
+      text += /* html */ `
         <div class="stat">
             <span class="name">${stat.name.replace("-", " ")}</span>
             <div class="value">
@@ -58,7 +58,7 @@ const PokemonItem = (el) => {
         </div>
       `;
     });
-    text += `
+    text += /* html */ `
         <div class="stat">
             <span class="name">Total</span>
             <div class="value">
@@ -79,6 +79,47 @@ const PokemonItem = (el) => {
   const description = speces.flavor_text_entries
     .find((el) => el.language.name === "en")
     .flavor_text.replace("", " ");
+
+  const getGender = (name) => {
+    let arrayNombre = name.split(" "),
+      isFemale = null;
+    if (arrayNombre.length === 2) {
+      if (arrayNombre[1] === "f") {
+        isFemale = true;
+      } else {
+        isFemale = false;
+      }
+    } else {
+      if (name.endsWith("queen") || name === "nidorina") {
+        isFemale = true;
+      } else if (name.endsWith("king") || name === "nidorino") {
+        isFemale = false;
+      } else {
+        isFemale = null;
+      }
+    }
+
+    let porcentaje = Math.random() * 100,
+      male = porcentaje,
+      female = 100 - male;
+
+    if (isFemale !== null) {
+      if (isFemale) {
+        male = 0;
+        female = 100;
+      } else {
+        male = 100;
+        female = 0;
+      }
+    }
+
+    male = male.toFixed(2);
+    female = female.toFixed(2);
+
+    return [male, female];
+  };
+
+  const gender = getGender(name);
 
   return /* html */ `
     <div class="content ${types[0]}">
@@ -125,6 +166,13 @@ const PokemonItem = (el) => {
                 <h5>Breeding</h4>
                 <table>
                   <tbody>
+                    <tr>
+                      <td>Gender</td>
+                      <td>
+                        <span><i class="fas fa-mars"></i> ${gender[0]}%</span>
+                        <span><i class="fas fa-venus"></i> ${gender[1]}%</span>
+                      </td>
+                    </tr>
                     <tr>
                       <td>Egg Groups</td>
                       <td>${getEggGroups()}</td>
