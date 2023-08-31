@@ -1,5 +1,17 @@
 const PokemonItem = (el) => {
-  const { name, img, types, id, weigth, height, abilities, speces, stats } = el;
+  const {
+    name,
+    img,
+    types,
+    id,
+    weigth,
+    height,
+    abilities,
+    speces,
+    stats,
+    moves,
+    evolution,
+  } = el;
 
   const zerofill = (value, length) => {
     return value.toString().length < length
@@ -121,6 +133,50 @@ const PokemonItem = (el) => {
 
   const gender = getGender(name);
 
+  const getMoves = () => {
+    let text = "<ul>";
+    moves.forEach((move) => {
+      text += `<li>${move.replaceAll("-", "")}</li>`;
+    });
+    text += "</ul>";
+    return text;
+  };
+
+  const getEvolutions = () => {
+    let text = "";
+
+    text += /* html */ `
+        <div class="evolution">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
+            evolution.chain.species.url.split("/").slice(-2)[0]
+          }.png" alt="${evolution.chain.species.name.replaceAll("-", " ")}">
+          <span>${evolution.chain.species.name.replaceAll("-", " ")}</span>
+        </div>
+      `;
+
+    evolution.chain.evolves_to.forEach((el) => {
+      text += /* html */ `
+        <div class="evolution">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
+            el.species.url.split("/").slice(-2)[0]
+          }.png" alt="${el.species.name.replaceAll("-", " ")}">
+          <span>${el.species.name.replaceAll("-", " ")}</span>
+        </div>
+      `;
+      el.evolves_to.forEach((el2) => {
+        text += /* html */ `
+        <div class="evolution">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
+            el2.species.url.split("/").slice(-2)[0]
+          }.png" alt="${el2.species.name.replaceAll("-", " ")}">
+          <span>${el2.species.name.replaceAll("-", " ")}</span>
+        </div>
+      `;
+      });
+    });
+    return text;
+  };
+
   return /* html */ `
     <div class="content ${types[0]}">
             <div class="about">
@@ -190,10 +246,16 @@ const PokemonItem = (el) => {
               <p>${description}</p>
               </div>
                <div class="tab" id="evolution">
-                evolution
+                Evolution Chain
+                <div class="overflow-y-auto evolutions">
+                  ${getEvolutions()}
+                  </div>
               </div>
               <div class="tab" id="moves">
-                movimientos
+                Moves
+                <div class="overflow-y-auto">
+                  ${getMoves()}
+                </div>
               </div>
             </div>
           </div>

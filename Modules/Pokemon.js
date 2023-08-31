@@ -25,6 +25,9 @@ function Pokemon(data, callback) {
         abilities: data.abilities.map((el) => el.ability.name),
         id: data.id,
         speces: await getData(data.species.url),
+        evolution: await getData(data.species.url).then(async (data) => {
+          return await getData(data.evolution_chain.url);
+        }),
         weigth: data.weight,
         height: data.height,
       });

@@ -503,6 +503,56 @@ input.form-control:active {
   }
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+  height: 60vh;
+}
+
+.overflow-y-auto ul li {
+  list-style: none;
+  padding-left: 2.5rem;
+  background-image: url("https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pokemon-icon.png");
+  background-position: 0 0;
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+}
+
+.evolutions {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.evolutions .evolution {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.evolutions .evolution::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.evolutions .evolution:last-child::after {
+  display: none;
+}
+
+/* Grass Type */
 /* Grass Type */
 .item.grass {
   background-color: #78c850;
@@ -518,6 +568,10 @@ input.form-control:active {
 .pokemon:has(.content.grass) .navbar .back:focus,
 .pokemon:has(.content.grass) .navbar .back:active {
   color: #78c850;
+}
+
+.pokemon:has(.content.grass) .evolutions .evolution::after {
+  border-top: 10px solid #78c850;
 }
 
 /* Fire Type */
@@ -537,6 +591,10 @@ input.form-control:active {
   color: #f08030;
 }
 
+.pokemon:has(.content.fire) .evolutions .evolution::after {
+  border-top: 10px solid #f08030;
+}
+
 /* Water Type */
 .item.water {
   background-color: #6890f0;
@@ -552,6 +610,10 @@ input.form-control:active {
 .pokemon:has(.content.water) .navbar .back:focus,
 .pokemon:has(.content.water) .navbar .back:active {
   color: #6890f0;
+}
+
+.pokemon:has(.content.water) .evolutions .evolution::after {
+  border-top: 10px solid #6890f0;
 }
 
 /* Electric Type */
@@ -571,6 +633,10 @@ input.form-control:active {
   color: #f8d030;
 }
 
+.pokemon:has(.content.electric) .evolutions .evolution::after {
+  border-top: 10px solid #f8d030;
+}
+
 /* Normal Type */
 .item.normal {
   background-color: #a8a878;
@@ -586,6 +652,10 @@ input.form-control:active {
 .pokemon:has(.content.normal) .navbar .back:focus,
 .pokemon:has(.content.normal) .navbar .back:active {
   color: #a8a878;
+}
+
+.pokemon:has(.content.normal) .evolutions .evolution::after {
+  border-top: 10px solid #a8a878;
 }
 
 /* Fairy Type */
@@ -605,6 +675,10 @@ input.form-control:active {
   color: #ee99ac;
 }
 
+.pokemon:has(.content.fairy) .evolutions .evolution::after {
+  border-top: 10px solid #ee99ac;
+}
+
 /* Fighting Type */
 .item.fighting {
   background-color: #c03028;
@@ -620,6 +694,10 @@ input.form-control:active {
 .pokemon:has(.content.fighting) .navbar .back:focus,
 .pokemon:has(.content.fighting) .navbar .back:active {
   color: #c03028;
+}
+
+.pokemon:has(.content.fighting) .evolutions .evolution::after {
+  border-top: 10px solid #c03028;
 }
 
 /* Poison Type */
@@ -639,6 +717,10 @@ input.form-control:active {
   color: #a040a0;
 }
 
+.pokemon:has(.content.poison) .evolutions .evolution::after {
+  border-top: 10px solid #a040a0;
+}
+
 /* Ground Type */
 .item.ground {
   background-color: #e0c068;
@@ -654,6 +736,10 @@ input.form-control:active {
 .pokemon:has(.content.ground) .navbar .back:focus,
 .pokemon:has(.content.ground) .navbar .back:active {
   color: #e0c068;
+}
+
+.pokemon:has(.content.ground) .evolutions .evolution::after {
+  border-top: 10px solid #e0c068;
 }
 
 /* Flying Type */
@@ -673,6 +759,10 @@ input.form-control:active {
   color: #a890f0;
 }
 
+.pokemon:has(.content.flying) .evolutions .evolution::after {
+  border-top: 10px solid #a890f0;
+}
+
 /* Psychic Type */
 .item.psychic {
   background-color: #f85888;
@@ -688,6 +778,10 @@ input.form-control:active {
 .pokemon:has(.content.psychic) .navbar .back:focus,
 .pokemon:has(.content.psychic) .navbar .back:active {
   color: #f85888;
+}
+
+.pokemon:has(.content.psychic) .evolutions .evolution::after {
+  border-top: 10px solid #f85888;
 }
 
 /* Bug Type */
@@ -707,6 +801,10 @@ input.form-control:active {
   color: #a8b820;
 }
 
+.pokemon:has(.content.bug) .evolutions .evolution::after {
+  border-top: 10px solid #a8b820;
+}
+
 /* Rock Type */
 .item.rock {
   background-color: #b8a038;
@@ -722,6 +820,10 @@ input.form-control:active {
 .pokemon:has(.content.rock) .navbar .back:focus,
 .pokemon:has(.content.rock) .navbar .back:active {
   color: #b8a038;
+}
+
+.pokemon:has(.content.rock) .evolutions .evolution::after {
+  border-top: 10px solid #b8a038;
 }
 
 /* Ghost Type */
@@ -741,6 +843,10 @@ input.form-control:active {
   color: #705898;
 }
 
+.pokemon:has(.content.ghost) .evolutions .evolution::after {
+  border-top: 10px solid #705898;
+}
+
 /* Dragon Type */
 .item.dragon {
   background-color: #7038f8;
@@ -756,6 +862,10 @@ input.form-control:active {
 .pokemon:has(.content.dragon) .navbar .back:focus,
 .pokemon:has(.content.dragon) .navbar .back:active {
   color: #7038f8;
+}
+
+.pokemon:has(.content.dragon) .evolutions .evolution::after {
+  border-top: 10px solid #7038f8;
 }
 
 /* Steel Type */
@@ -775,6 +885,10 @@ input.form-control:active {
   color: #b8b8d0;
 }
 
+.pokemon:has(.content.steel) .evolutions .evolution::after {
+  border-top: 10px solid #b8b8d0;
+}
+
 /* Ice Type */
 .item.ice {
   background-color: #98d8d8;
@@ -790,4 +904,70 @@ input.form-control:active {
 .pokemon:has(.content.ice) .navbar .back:focus,
 .pokemon:has(.content.ice) .navbar .back:active {
   color: #98d8d8;
+}
+
+.pokemon:has(.content.ice) .evolutions .evolution::after {
+  border-top: 10px solid #98d8d8;
+}
+
+/* Barras de desplazamiento en Firefox */
+/* Barra vertical */
+scrollbar {
+  width: 5px;
+  background-color: #b4b4b4;
+  border-radius: 6px;
+}
+
+scrollbar thumb {
+  background-color: #555;
+  border-radius: 6px;
+}
+
+scrollbar-thumb:hover {
+  background-color: #808080;
+}
+
+/* Barra horizontal */
+scrollbar[orient="horizontal"] {
+  height: 5px;
+}
+
+scrollbar[orient="horizontal"] thumb {
+  background-color: #555;
+  border-radius: 6px;
+}
+
+scrollbar[orient="horizontal"] thumb:hover {
+  background-color: #808080;
+}
+
+/* Barras de desplazamiento en Chrome */
+/* Barra vertical */
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #b4b4b4;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #808080;
+}
+
+/* Barra horizontal */
+::-webkit-scrollbar[orient="horizontal"] {
+  height: 5px;
+}
+
+::-webkit-scrollbar[orient="horizontal"] thumb {
+  background-color: #555;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar[orient="horizontal"] thumb:hover {
+  background-color: #808080;
 }
