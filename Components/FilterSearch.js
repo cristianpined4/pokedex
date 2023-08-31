@@ -14,7 +14,7 @@ const FilterSearch = (input, selector) => {
       document
         .querySelectorAll(selector)
         .forEach((el) =>
-          el.textContent.toLowerCase().includes(e.target.value)
+          el.textContent.toLowerCase().includes(e.target.value.toLowerCase())
             ? el.classList.remove("filter")
             : el.classList.add("filter")
         );
