@@ -1,12 +1,12 @@
 "use strict";
 import FilterSearch from "./Components/FilterSearch.js";
 import PokemonItem from "./Components/PokemonItem.js";
-import Tags from "./Components/Tags.js";
+import Tabs from "./Components/Tabs.js";
 import Pokedex from "./Modules/Pokedex.js";
 import Pokemon from "./Modules/Pokemon.js";
 
 const content = document.querySelector("#contenedor");
-const { initTags, resetTags, initEventsTags } = Tags();
+const { initTabs, resetTabs, initEventsTabs } = Tabs();
 const { dibujarPokedex } = Pokedex();
 
 const getFavorites = (id) => {
@@ -38,7 +38,7 @@ document.addEventListener("click", (e) => {
       } else {
         document.querySelector(".favorite").classList.remove("active");
       }
-      initTags();
+      initTabs();
       content.classList.add("active");
       content.classList.remove("not-active");
     });
@@ -48,12 +48,12 @@ document.addEventListener("click", (e) => {
     content.classList.remove("active");
     content.classList.add("not-active");
     document.querySelector(".pokemon").scrollTop = 0;
-    resetTags();
+    resetTabs();
   }
 
   if (e.target.matches(".nav-items a")) {
     e.preventDefault();
-    initEventsTags(e);
+    initEventsTabs(e);
   }
 
   if (e.target.matches(".favorite")) {

@@ -191,7 +191,7 @@ const PokemonItem = (el) => {
             <img
               src="${img}"
               alt="${name}">
-            <div class="info tags">
+            <div class="info tabs">
               <nav class="nav-items">
                 <a href="#about">About</a>
                 <a href="#base">Base Stats</a>

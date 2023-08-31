@@ -1,6 +1,6 @@
-const Tags = () => {
-  const initTags = () => {
-    let navItems = document.querySelectorAll(".tags .nav-items a");
+const Tabs = () => {
+  const initTabs = () => {
+    let navItems = document.querySelectorAll(".tabs .nav-items a");
     if (navItems.length > 0) {
       navItems[0].classList.add("active");
       document
@@ -9,8 +9,8 @@ const Tags = () => {
     }
   };
 
-  const resetTags = () => {
-    let navItems = document.querySelectorAll(".tags .nav-items a");
+  const resetTabs = () => {
+    let navItems = document.querySelectorAll(".tabs .nav-items a");
     if (navItems.length > 0) {
       navItems.forEach((el) => {
         el.classList.remove("active");
@@ -25,8 +25,8 @@ const Tags = () => {
     }
   };
 
-  const initEventsTags = (e) => {
-    let navItems = document.querySelectorAll(".tags .nav-items a");
+  const initEventsTabs = (e) => {
+    let navItems = document.querySelectorAll(".tabs .nav-items a");
     navItems.forEach((el) => {
       el.classList.remove("active");
       document
@@ -39,7 +39,7 @@ const Tags = () => {
       .classList.add("active");
   };
 
-  return { initTags, resetTags, initEventsTags };
+  return { initTabs, resetTabs, initEventsTabs };
 };
 
-export default Tags;
+export default Tabs;
